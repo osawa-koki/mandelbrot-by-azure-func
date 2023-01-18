@@ -22,6 +22,18 @@
 `Azure Functions`の仕様上、widthに1億など巨大な数字を入力されてもタイムアウトが発生するため、パラメタのチェックはしていない。  
 リクエストの回数のみが課金対象となっているため、一回の要求で大きな処理をしてもお財布は痛まない。  
 
+## Azure Functionsへのデプロイ方法
+
+[公式の拡張機能(VSCode)](ms-azuretools.vscode-azurefunctions)を用いて簡単にデプロイ可能。  
+
+資源グループを作成していない場合には、Azureポータルサイトから資源グループを作成し、「関数アプリ」を作成する。  
+その中に、適当な名前の関数(ここでは"mandelbrot_by_azure_func")を作成し、このプロジェクトをアップロードする。  
+
+これより下は、インストールした公式の拡張機能で実行可能。  
+「A」のマークのメニュータブが左に表示されるので、これをクリック、AzureにサインインしてWORKSPACEの中にある雲のアイコンのデプロイボタンを押せばデプロイ完了。  
+
+とっても簡単🐙🐙🐙  
+
 ## 参考資料
 
 - [Getting started with Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-get-started?pivots=programming-language-csharp)
