@@ -7,6 +7,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
 namespace mandelbrot
 {
@@ -39,8 +41,6 @@ namespace mandelbrot
       if (double.TryParse(req.Query["x1"], out x1) == false) x1 = 2.0;
       if (double.TryParse(req.Query["y1"], out y1) == false) y1 = 2.0;
 
-
-      // 画像データを返す。
       var responseMessage = new
       {
         width = width,
