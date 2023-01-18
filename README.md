@@ -34,8 +34,37 @@
 
 とっても簡単🐙🐙🐙  
 
+## 補足
+
+GitHub Actionsが使えない事件。  
+GitHub Actionsでデプロイしようとすると、以下のエラーが、、、  
+
+```console
+Error: Execution Exception (state: PublishContent) (step: Invocation)
+Error:   When request Azure resource at PublishContent, zipDepoy : WEBSITE_RUN_FROM_PACKAGE in your function app is set to an URL. Please remove WEBSITE_RUN_FROM_PACKAGE app setting from your function app.
+Error: Deployment Failed!
+```
+
+アクションの内容は<https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-how-to-github-actions>通り。  
+
+で、`WEBSITE_RUN_FROM_PACKAGE`の値を変更しようと調べてみると、
+
+|ホスティング プラン | Windows | Linux |
+| ---- | ---- | ---- |
+| 従量課金プラン | 1 が強く推奨されます。 | サポートされるのは \<URL\> のみです。 |
+| Premium | 1 が推奨されます。 | 1 が推奨されます。 |
+| 専用 | 1 が推奨されます。 | 1 が推奨されます。 |
+
+との記載が、、、  
+<https://learn.microsoft.com/ja-jp/azure/azure-functions/run-functions-from-deployment-package>より。  
+
+いわゆる無料プランは従量課金のみ、、、  
+無料プランはGitHub Actions使えないの！？  
+
+そういえば、Visual Studioも少し前まで、F12による定義へのジャンプは無料プランでは使えなったような、、、  
+まあ、VSCodeの拡張機能でも問題ないか、、、  
+
 ## 参考資料
 
 - [Getting started with Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-get-started?pivots=programming-language-csharp)
 - [Quickstart: Create a C# function in Azure using Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-csharp)
-- [GitHub Actions](https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-how-to-github-actions)
