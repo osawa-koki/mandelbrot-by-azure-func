@@ -24,7 +24,7 @@
 
 ## Azure Functionsへのデプロイ方法
 
-[公式の拡張機能(VSCode)](ms-azuretools.vscode-azurefunctions)を用いて簡単にデプロイ可能。  
+[公式の拡張機能(VSCode)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)を用いて簡単にデプロイ可能。  
 
 資源グループを作成していない場合には、Azureポータルサイトから資源グループを作成し、「関数アプリ」を作成する。  
 その中に、適当な名前の関数(ここでは"mandelbrot_by_azure_func")を作成し、このプロジェクトをアップロードする。  
