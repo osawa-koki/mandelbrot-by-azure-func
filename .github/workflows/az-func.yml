@@ -1,12 +1,14 @@
 name: Deploy DotNet project to function app with a Linux environment
 
 on:
-  [push]
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
 
 env:
   AZURE_FUNCTIONAPP_NAME: mandelbrot-by-azure-func  # set this to your application's name
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: './api'           # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '2.2.402'                         # set this to the dotnet version to use
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'           # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '6.0.405'                         # set this to the dotnet version to use
 
 jobs:
   build-and-deploy:
