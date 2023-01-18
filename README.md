@@ -1,6 +1,6 @@
 # mandelbrot_by_azure_func
 
-`Azure Functions`でマンデルブロ集合を描写するAPIを実装する。  
+🐧🐧🐧 `Azure Functions`でマンデルブロ集合を描写するAPIを実装する。  
 
 指定可能なパラメタは以下の通り。  
 
