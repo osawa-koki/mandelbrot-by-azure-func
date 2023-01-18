@@ -38,3 +38,4 @@
 
 - [Getting started with Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-get-started?pivots=programming-language-csharp)
 - [Quickstart: Create a C# function in Azure using Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-csharp)
+- [GitHub Actions](https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-how-to-github-actions)
