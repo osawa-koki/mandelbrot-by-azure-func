@@ -2,6 +2,8 @@
 
 🐧🐧🐧 `Azure Functions`でマンデルブロ集合を描写するAPIを実装する。  
 
+![成果物](.development/img/fruit.gif)  
+
 指定可能なパラメタは以下の通り。  
 
 | パラメタ | 説明 |
